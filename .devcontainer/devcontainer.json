@@ -1,0 +1,11 @@
+{
+  "name": "Mama VPS workspace",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "postCreateCommand": "bash .devcontainer/mama-terminal.sh install",
+  "postStartCommand": "bash .devcontainer/mama-terminal.sh start",
+  "postAttachCommand": "bash .devcontainer/mama-terminal.sh ensure",
+  "forwardPorts": [7681],
+  "portsAttributes": {
+    "7681": { "label": "Mama VPS terminal", "onAutoForward": "silent" }
+  }
+}
